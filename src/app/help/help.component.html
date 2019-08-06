@@ -1,0 +1,29 @@
+<mat-horizontal-stepper labelPosition="bottom">
+  <mat-step label="Step one">
+    <div class="jumbotron" style="text-align: center">
+      <a class="nav-link" routerLink='/signup'>Sign up here</a>
+      <h4>Its free!!!</h4>
+      <button matStepperNext class="btn btn-info">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Step two">
+      <div class="jumbotron" style="text-align: center">
+          <a class="nav-link" routerLink=''>Log in here</a>
+          <button matStepperPrevious class="btn btn-info mr-1">Back</button>
+          <button matStepperNext class="btn btn-info ml-1">Next</button>
+      </div>
+  </mat-step>
+  <mat-step label="Step three">
+      <div class="jumbotron" style="text-align: center">
+          <a class="nav-link" routerLink='/product'>Create products here</a>
+          <button matStepperPrevious class="btn btn-info mr-1">Back</button>
+          <button matStepperNext class="btn btn-info ml-1">Next</button>
+      </div>
+  </mat-step>
+  <mat-step label="Step three">
+      <div class="jumbotron" style="text-align: center">
+          <a class="nav-link" routerLink='/order'>Start making sales here</a>
+          <button matStepperPrevious class="btn btn-info">Back</button>
+      </div>
+  </mat-step>
+</mat-horizontal-stepper>

@@ -1,0 +1,36 @@
+<div class="modal-header">
+  <h4><b>Create New Product</b></h4>
+</div>
+<div class="modal-body">
+  <form [formGroup]="addProductForm">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Cost Price</label>
+        <input type="number" class="form-control" formControlName="costPrice">
+      </div>
+      <div class="form-group">
+        <label>Sell Price</label>
+        <input type="number" class="form-control" formControlName="sellPrice">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Category</label>
+      <select placeholder="category" class="form-control" formControlName="category">
+        <option>Food</option>
+        <option>Drink</option>
+        <option>Others</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Select Image</label>
+      <input type="file" class="form-control" formControlName="imgUrl">
+    </div>   
+  </form>      
+</div>
+<div class="modal-footer">
+  <button class="btn btn-danger" (click)="close()">Cancel</button><button class="btn btn-primary" (click)="saveProduct()" (click)="close()">Save</button>
+</div>

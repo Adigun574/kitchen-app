@@ -1,0 +1,39 @@
+<button mat-stroked-button style="float:left;" class="ml-5 mt-5 mb-3" (click)="addProduct()" (click)="open(defaultModal)">+ Add Product</button>
+
+<div *ngIf="productExist">
+<table class="table table-striped">
+  <thead>
+        <td>
+          <b>S/N</b>
+        </td>
+        <td>
+          <b>Name</b>
+        </td>
+        <td>
+          <b>Category</b>
+        </td>
+        <td>
+          <b>Price</b>
+        </td>
+  </thead>
+  <tr *ngFor="let product of products; index as i">
+    <td><b>{{i+1}}</b></td>
+    <td>{{product.name}}</td>
+    <td>{{product.category}}</td>
+    <td>N{{product.sellPrice}}</td>
+    <td (click)="deleteProduct(product)"><i class="fa fa-trash"></i></td>
+  </tr>
+</table>
+</div>
+
+<div class="loader" *ngIf="loading"></div>
+
+<ng-template #defaultModal let-c="close" let-d="dismiss" let-modal>
+    <router-outlet name="addproduct"></router-outlet> 
+</ng-template>
+
+<div style="text-align:center; opacity:0.3" *ngIf="!productExist" class="mt-4">
+  <h3>You have not created any product yet!!!</h3>
+</div>
+
+

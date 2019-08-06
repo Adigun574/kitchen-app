@@ -1,0 +1,66 @@
+#login{
+    text-align: center
+}
+#account{
+    text-align: center
+}
+#userIcon{
+    text-align:center;
+    color:white;
+    background-color:rgb(230, 57, 57);
+    border-radius:70px;
+    padding-left:10px 10px 10px 10px;
+    width:60px;
+    height:60px;
+    margin:auto;
+}
+#form{
+    background-color:rgb(238, 234, 234);
+    margin-top:50px;
+    padding:30px 20px 20px 20px;
+    box-shadow:2px 2px 5px rgb(92, 91, 91), -2px -2px 5px rgb(92, 91, 91)
+}
+#submit{
+    width:100%;
+    height:30px;
+    background-color: rgb(230, 57, 57);
+    color:white;
+    border:none;
+    border-radius:5px
+}
+#username{
+    margin-top:20px
+}
+#password{
+
+}
+#account{
+    margin-top:20px;
+    color:rgb(87, 82, 82)
+}
+#forgot{
+    margin-top:10px
+}
+#not{
+    text-align:center
+}
+.loader{
+    border:5px solid white;
+    border-radius: 50%;
+    border-top: 5px solid rgb(146, 146, 146);
+    border-bottom:5px solid rgb(146, 146, 146);
+    width:50px;
+    height:50px;
+    margin:20px auto;
+    animation:spin 2s linear infinite;
+    -webkit-animation:spin 2s linear infinite
+}
+@-webkit-keyframes spin {
+    0%{-webkit-transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(360deg)}
+}
+@keyframes spin {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+

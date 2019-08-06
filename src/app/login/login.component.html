@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="../../assets/undraw_special_event_4aj8.png" width="300px" height="400px">
+      <h5 style="color:red"><i>One stop app for managing your restaurant...</i></h5>
+    </div>
+    <div class="col-md-6">
+      <div id="form">
+          <form  [formGroup]="loginform">
+            <div id="icon">
+              <h1 id="userIcon"><i class="fa fa-user"></i></h1>
+            </div>
+              <h6 id="account">ACCOUNT LOGIN</h6>
+              <div class="form-group" id = "username">
+                <input type="text" class="form-control" placeholder="username" formControlName="userName">
+              </div>
+              <div class="form-group" id = "password">
+                  <input type="password" class="form-control" placeholder="password" formControlName="password">
+              </div>
+              <div class="loader" *ngIf="logging"></div>
+              <small class="text-danger" style="text-align: center" *ngIf="!correctCredentials">wrong username and/or password</small>
+              <button type="submit" id ="submit" (click)="login()">Submit</button>
+              <p id="forgot"><a href="#">Forgot Password?</a></p>
+              <p id="not"><a routerLink="/signup" >Not yet registered? Sign Up</a></p>
+              
+          </form>  
+      </div>              
+    </div>
+  </div>
+</div>

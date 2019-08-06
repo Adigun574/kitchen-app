@@ -1,0 +1,49 @@
+<flash-messages></flash-messages>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="../../assets/undraw_special_event_4aj8.png" width="300px" height="400px">
+      <h5 style="color:red"><i>One stop app for managing your restaurant...</i></h5>
+    </div>
+    <div class="col-md-6">
+      <div id="form">
+          <form [formGroup]="signupform">
+            <div id="icon">
+              <h1 id="userIcon"><i class="fa fa-user"></i></h1>
+            </div>
+              <h6 id="account">REGISTER ACCOUNT</h6>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" formControlName="firstName" (input)="checkFormValidity()">
+                <small [class.d-none]="firstName.valid || firstName.untouched">First name is required</small>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" formControlName="lastName" (input)="checkFormValidity()">
+                <small [class.d-none]="lastName.valid || lastName.untouched" >Last name is required</small>
+              </div>
+              <div class="form-group" id = "username">
+                <input type="text" class="form-control" placeholder="username" formControlName="userName" (input)="checkFormValidity()">
+                <small [class.d-none]="userName.valid || userName.untouched">username is required</small>
+              </div>
+              <div class="form-group" id = "username">
+                <input type="text" class="form-control" placeholder="email" formControlName="email" (input)="checkFormValidity()">
+                <small [class.d-none]="email.valid || email.untouched">email is required</small>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Company Name" formControlName="companyName" (input)="checkFormValidity()">
+                <small [class.d-none]="companyName.valid || companyName.untouched">Company name is required</small>
+              </div>
+              <div class="form-group" id = "password">
+                  <input type="password" class="form-control" placeholder="password" formControlName="password" (input)="checkFormValidity()">
+                  <div *ngIf="password.invalid && password.touched">
+                    <small *ngIf="password.errors?.required">Password is required</small>
+                    <small *ngIf="password.errors?.minlength">Password must be at least four characters long</small>
+                  </div>
+              </div>
+              <div class="loader" *ngIf="signing"></div>
+              <button type="submit" id ="register" (click)="registerUser()" [disabled]="!this.disableRegistrationForm">Register</button>
+              
+          </form>  
+      </div>              
+    </div>
+  </div>
+</div>

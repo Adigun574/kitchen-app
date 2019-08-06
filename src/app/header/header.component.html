@@ -1,0 +1,33 @@
+<!-- <div class="container-fluid" id ="heading"><h1>---</h1>
+</div> -->
+<nav  class="navbar navbar-expand-lg navbar-dark"><img src='../../assets/undraw_Chef_cu0r.png' style="width:40px; height:40px; border-radius:50px; border:2px solid red" class="mr-1">
+    <a class="navbar-brand" href="#" style="color:red"> Mariam's Restaurant App</a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show':navbarOpen}">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink='/order'><i class="fa fa-shopping-cart"></i> Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='/sales'><i class="fa fa-money"></i> Sales History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='/product'><i class="fa fa-shopping-basket"></i> Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink=''><i class="fa fa-power-off"></i> Log out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='/help'><i class="fa fa-info"></i> Help</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<!-- <div class="container-fluid" class="footer">
+    <p class="pt-3" class="mb-0">Restaurant App &copy; 2019</p>
+    <h3 class="mt-1"><i class="fa fa-whatsapp"></i> <i class="fa fa-facebook"></i> <i class="fa fa-youtube"></i><i class="fa fa-twitter"></i><i class="fa fa-instagram"></i></h3>
+</div>
+ -->
