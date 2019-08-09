@@ -8,11 +8,19 @@ export class SalesService {
 
   constructor(private http: HttpClient) { }
 
+  // saveSales(newSales){
+  //   return this.http.post(`http://localhost:3000/sales/saleshistory`,newSales)
+  // }
+
+  // getSalesByEmail(email){
+  //   return this.http.get(`http://localhost:3000/sales/saleshistory/${email}`)
+  // }
+
   saveSales(newSales){
-    return this.http.post(`http://localhost:3000/sales/saleshistory`,newSales)
+    return this.http.post(`https://glacial-coast-65553.herokuapp.com/sales/saleshistory`,newSales)
   }
 
   getSalesByEmail(email){
-    return this.http.get(`http://localhost:3000/sales/saleshistory/${email}`)
+    return this.http.get(`https://glacial-coast-65553.herokuapp.com/sales/saleshistory/${email}`)
   }
 }

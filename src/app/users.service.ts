@@ -10,11 +10,20 @@ export class UsersService {
     private http:HttpClient
   ) { }
 
+  // registerUser(user){
+  //   return this.http.post('http://localhost:3000/users/register',user)
+  // }
+
+  // loginUser(user){
+  //   return this.http.post('http://localhost:3000/users/login', user)
+  // }
+
   registerUser(user){
-    return this.http.post('http://localhost:3000/users/register',user)
+    return this.http.post('https://glacial-coast-65553.herokuapp.com/users/register',user)
+  }
+  
+  loginUser(user){
+    return this.http.post('https://glacial-coast-65553.herokuapp.com/users/login', user)
   }
 
-  loginUser(user){
-    return this.http.post('http://localhost:3000/users/login', user)
-  }
 }
