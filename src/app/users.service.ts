@@ -19,11 +19,11 @@ export class UsersService {
   // }
 
   registerUser(user){
-    return this.http.post('http://glacial-coast-65553.herokuapp.com/users/register',user)
+    return this.http.post('https://glacial-coast-65553.herokuapp.com/users/register',user)
   }
   
   loginUser(user){
-    return this.http.post('http://glacial-coast-65553.herokuapp.com/users/login', user)
+    return this.http.post('https://glacial-coast-65553.herokuapp.com/users/login', user)
   }
 
 }
