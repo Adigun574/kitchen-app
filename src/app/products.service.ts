@@ -18,11 +18,11 @@ export class ProductsService {
   // }
 
   saveOneProduct(product){
-    return this.http.post('https://glacial-coast-65553.herokuapp.com/products/addproduct',product)
+    return this.http.post('http://glacial-coast-65553.herokuapp.com/products/addproduct',product)
   }
 
   getProducts(email){
-    return this.http.get(`https://glacial-coast-65553.herokuapp.com/products/getproducts/${email}`)
+    return this.http.get(`http://glacial-coast-65553.herokuapp.com/products/getproducts/${email}`)
   }
 
   // getProducts(){

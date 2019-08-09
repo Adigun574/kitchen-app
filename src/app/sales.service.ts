@@ -17,10 +17,10 @@ export class SalesService {
   // }
 
   saveSales(newSales){
-    return this.http.post(`https://glacial-coast-65553.herokuapp.com/sales/saleshistory`,newSales)
+    return this.http.post(`http://glacial-coast-65553.herokuapp.com/sales/saleshistory`,newSales)
   }
 
   getSalesByEmail(email){
-    return this.http.get(`https://glacial-coast-65553.herokuapp.com/sales/saleshistory/${email}`)
+    return this.http.get(`http://glacial-coast-65553.herokuapp.com/sales/saleshistory/${email}`)
   }
 }
